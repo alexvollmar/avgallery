@@ -14,11 +14,9 @@ import android.widget.ImageView;
 
 public class MainActivity extends Activity {
 
-	private String[] mImages = new String[] { "chefchaouen_1", "chefchaouen_2", "essaouira_1", "essaouira_2", "marrakech", "sidi_ifni_1", "sidi_ifni_2", "tetouan", };
-
-	private String[] mDescriptions = new String[] { "Chefchaouen 1", "Chefchaouen 2", "Essaouira 1", "Essaouira 2", "Marrakech", "Sidi Ifni 1", "Sidi Ifni 2", "Tétouan" };
-	private String[] mSources = new String[] { "Own Photo, 11.11.2013", "Own Photo, 11.11.2013", "Own Photo, 15.11.2013", "Own Photo, 16.11.2013", "Own Photo, 13.11.2013", "Own Photo, 19.11.2013",
-			"Own Photo, 19.11.2013", "Own Photo, 10.11.2013" };
+	private String[] mImages;
+	private String[] mDescriptions;
+	private String[] mSources;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -26,6 +24,11 @@ public class MainActivity extends Activity {
 
 		setContentView(R.layout.activity_main);
 
+		// read image information from images.xml
+		mImages = getResources().getStringArray(R.array.images);
+		mDescriptions = getResources().getStringArray(R.array.descriptions);
+		mSources = getResources().getStringArray(R.array.sources);
+		
 		Gallery thumbnailGallery = (Gallery) findViewById(R.id.gallery);
 		thumbnailGallery.setAdapter(new GalleryAdapter());
 

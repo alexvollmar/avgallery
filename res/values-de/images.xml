@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="descriptions">
+        <item>Chefchaouen 1</item>
+        <item>Chefchaouen 2</item>
+        <item>Essaouira 1</item>
+        <item>Essaouira 2</item>
+        <item>Marrakesch</item>
+        <item>Sidi Ifni 1</item>
+        <item>Sidi_Ifni 2</item>
+        <item>Tetouan</item>
+    </string-array>
+    <string-array name="sources">
+        <item>Eigene Aufnahme, 11.11.2013</item>
+        <item>Eigene Aufnahme, 11.11.2013</item>
+        <item>Eigene Aufnahme, 15.11.2013</item>
+        <item>Eigene Aufnahme, 16.11.2013</item>
+        <item>Eigene Aufnahme, 13.11.2013</item>
+        <item>Eigene Aufnahme, 19.11.2013</item>
+        <item>Eigene Aufnahme, 19.11.2013</item>
+        <item>Eigene Aufnahme, 10.11.2013</item>
+    </string-array>
+
+</resources>

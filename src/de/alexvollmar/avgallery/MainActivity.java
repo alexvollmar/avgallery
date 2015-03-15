@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 
 		setContentView(R.layout.activity_main);
 
-		Gallery thumbnailGallery = (Gallery) findViewById(R.id.main);
+		Gallery thumbnailGallery = (Gallery) findViewById(R.id.gallery);
 		thumbnailGallery.setAdapter(new GalleryAdapter());
 
 		thumbnailGallery.setOnItemClickListener(new OnItemClickListener() {

@@ -14,13 +14,6 @@ import android.widget.TextView;
 
 public class ViewPagerActivity extends Activity {
 
-	private static final String IMAGES = "images";
-	private static final String DESCRIPTIONS = "descriptions";
-	private static final String SOURCES = "sources";
-
-	private static final String IMAGE_POSITION = "image_position";
-	private static final String SAVED_POSITION = "saved_position";
-
 	private ViewPager mViewPager;
 	private TextView mTextViewDescription;
 	private TextView mTextViewSource;
@@ -35,13 +28,13 @@ public class ViewPagerActivity extends Activity {
 		Bundle bundle = getIntent().getExtras();
 		assert bundle != null;
 		
-		String[] images = bundle.getStringArray(IMAGES);
-		int imagePosition = bundle.getInt(IMAGE_POSITION, 0);
-		String[] descriptions = bundle.getStringArray(DESCRIPTIONS);
-		String[] sources = bundle.getStringArray(SOURCES);
+		String[] images = bundle.getStringArray(Strings.IMAGES);
+		int imagePosition = bundle.getInt(Strings.IMAGE_POSITION, 0);
+		String[] descriptions = bundle.getStringArray(Strings.DESCRIPTIONS);
+		String[] sources = bundle.getStringArray(Strings.SOURCES);
 
 		if (savedInstanceState != null) {
-			imagePosition = savedInstanceState.getInt(SAVED_POSITION);
+			imagePosition = savedInstanceState.getInt(Strings.SAVED_POSITION);
 		}
 
 		getLayoutInflater();
@@ -57,7 +50,7 @@ public class ViewPagerActivity extends Activity {
 
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
-		outState.putInt(SAVED_POSITION, mViewPager.getCurrentItem());
+		outState.putInt(Strings.SAVED_POSITION, mViewPager.getCurrentItem());
 	}
 
 	private class ImagePagerAdapter extends PagerAdapter {

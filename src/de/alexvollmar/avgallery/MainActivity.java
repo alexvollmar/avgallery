@@ -14,13 +14,6 @@ import android.widget.ImageView;
 
 public class MainActivity extends Activity {
 
-	private static final String THUMBNAIL_SUFFIX = "_thumb";
-
-	private static final String IMAGES = "images";
-	private static final String DESCRIPTIONS = "descriptions";
-	private static final String SOURCES = "sources";
-	private static final String IMAGE_POSITION = "image_position";
-
 	private String[] mImages = new String[] { "chefchaouen_1", "chefchaouen_2", "essaouira_1", "essaouira_2", "marrakech", "sidi_ifni_1", "sidi_ifni_2", "tetouan", };
 
 	private String[] mDescriptions = new String[] { "Chefchaouen 1", "Chefchaouen 2", "Essaouira 1", "Essaouira 2", "Marrakech", "Sidi Ifni 1", "Sidi Ifni 2", "Tétouan" };
@@ -46,10 +39,10 @@ public class MainActivity extends Activity {
 
 	private void startImagePagerActivity(int position) {
 		Intent intent = new Intent(this, ViewPagerActivity.class);
-		intent.putExtra(IMAGES, mImages);
-		intent.putExtra(IMAGE_POSITION, position);
-		intent.putExtra(DESCRIPTIONS, mDescriptions);
-		intent.putExtra(SOURCES, mSources);
+		intent.putExtra(Strings.IMAGES, mImages);
+		intent.putExtra(Strings.IMAGE_POSITION, position);
+		intent.putExtra(Strings.DESCRIPTIONS, mDescriptions);
+		intent.putExtra(Strings.SOURCES, mSources);
 
 		startActivity(intent);
 	}
@@ -62,7 +55,7 @@ public class MainActivity extends Activity {
 			if (imageView == null) {
 				imageView = (ImageView) getLayoutInflater().inflate(R.layout.item_thumbnail_image, parent, false);
 			}
-			imageView.setImageResource(getResources().getIdentifier(mImages[position] + THUMBNAIL_SUFFIX, "drawable", getPackageName()));
+			imageView.setImageResource(getResources().getIdentifier(mImages[position] + Strings.THUMBNAIL_SUFFIX, "drawable", getPackageName()));
 			return imageView;
 		}
 

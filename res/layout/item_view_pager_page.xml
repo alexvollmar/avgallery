@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_pager_image_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="0dp" >
+
+    <ImageView
+        android:id="@+id/view_pager_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_description" />
+
+    <TextView
+        android:id="@+id/view_pager_text_source"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#30000000"
+        android:paddingBottom="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="0dp"
+        android:textColor="@android:color/white"
+        android:textSize="9sp" />
+
+    <TextView
+        android:id="@+id/view_pager_text_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view_pager_text_source"
+        android:background="#30000000"
+        android:paddingBottom="0dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="0dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

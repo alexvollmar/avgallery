@@ -1,6 +1,7 @@
 package de.alexvollmar.avgallery;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
+import uk.co.senab.photoview.PhotoViewAttacher.OnPhotoTapListener;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -81,18 +82,44 @@ public class ViewPagerActivity extends Activity {
 		public Object instantiateItem(ViewGroup viewGroup, int position) {
 			View imageViewLayout = layoutInflater.inflate(R.layout.item_view_pager_page, viewGroup, false);
 
-			ImageView imageView = (ImageView) imageViewLayout.findViewById(R.id.view_pager_image);
+			final ImageView imageView = (ImageView) imageViewLayout.findViewById(R.id.view_pager_image);
 			imageView.setImageResource(getResources().getIdentifier(images[position], "drawable", getPackageName()));
-
-			// Attach a PhotoViewAttacher, which takes care of all of the zooming functionality.
-			PhotoViewAttacher attacher = new PhotoViewAttacher(imageView);
 
 			mTextViewDescription = (TextView) imageViewLayout.findViewById(R.id.view_pager_text_description);
 			mTextViewDescription.setText(descriptions[position]);
 
 			mTextViewSource = (TextView) imageViewLayout.findViewById(R.id.view_pager_text_source);
 			mTextViewSource.setText(sources[position]);
-
+			
+			// Attach a PhotoViewAttacher.
+			PhotoViewAttacher attacher = new PhotoViewAttacher(imageView);
+			
+			attacher.setOnPhotoTapListener(new OnPhotoTapListener() {
+					
+				private TextView textView1;
+				private TextView textView2;
+				
+				private OnPhotoTapListener init(TextView textView1, TextView textView2){
+					this.textView1 = textView1;
+					this.textView2 = textView2;
+					return this;
+			    }
+				
+				@Override
+				public void onPhotoTap(View view, float x, float y) {
+					System.out.println("photo touched! + mTextViewDescription.getVisibility(): " + mTextViewDescription.getVisibility());
+					if (textView1.getVisibility() == View.VISIBLE) {
+						textView1.setVisibility(View.GONE);
+						textView2.setVisibility(View.GONE);
+						System.out.println("invisible");
+					} else {
+						textView1.setVisibility(View.VISIBLE);
+						textView2.setVisibility(View.VISIBLE);
+					}
+				}
+				
+			}.init(mTextViewDescription, mTextViewSource));
+			
 			viewGroup.addView(imageViewLayout, 0);
 
 			return imageViewLayout;

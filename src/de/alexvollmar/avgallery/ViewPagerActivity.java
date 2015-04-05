@@ -118,7 +118,7 @@ public class ViewPagerActivity extends Activity {
 					}
 				}
 				
-			}.init(mTextViewDescription, mTextViewSource));
+			}.init(mTextViewDescription, mTextViewSource)); // pass the two TextViews to the Listener!
 			
 			viewGroup.addView(imageViewLayout, 0);
 

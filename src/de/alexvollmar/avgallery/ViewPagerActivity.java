@@ -28,13 +28,13 @@ public class ViewPagerActivity extends Activity {
 		Bundle bundle = getIntent().getExtras();
 		assert bundle != null;
 		
-		String[] images = bundle.getStringArray(Strings.IMAGES);
-		int imagePosition = bundle.getInt(Strings.IMAGE_POSITION, 0);
-		String[] descriptions = bundle.getStringArray(Strings.DESCRIPTIONS);
-		String[] sources = bundle.getStringArray(Strings.SOURCES);
+		String[] images = bundle.getStringArray(Constants.IMAGES);
+		int imagePosition = bundle.getInt(Constants.IMAGE_POSITION, 0);
+		String[] descriptions = bundle.getStringArray(Constants.DESCRIPTIONS);
+		String[] sources = bundle.getStringArray(Constants.SOURCES);
 
 		if (savedInstanceState != null) {
-			imagePosition = savedInstanceState.getInt(Strings.SAVED_POSITION);
+			imagePosition = savedInstanceState.getInt(Constants.SAVED_POSITION);
 		}
 
 		getLayoutInflater();
@@ -50,7 +50,7 @@ public class ViewPagerActivity extends Activity {
 
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
-		outState.putInt(Strings.SAVED_POSITION, mViewPager.getCurrentItem());
+		outState.putInt(Constants.SAVED_POSITION, mViewPager.getCurrentItem());
 	}
 
 	private class ImagePagerAdapter extends PagerAdapter {

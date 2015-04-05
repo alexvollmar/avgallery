@@ -1,9 +1,9 @@
 package de.alexvollmar.avgallery;
 
-public class Strings {
+public class Constants {
 	
-	// set the thumbnail suffix here!
-	static final String THUMBNAIL_SUFFIX = "_thumb";
+	// set the thumbnail size here!
+	static final int THUMBNAIL_SIZE = 150;
 	
 	
 	static final String IMAGES = "images";
@@ -14,7 +14,7 @@ public class Strings {
 	static final String SAVED_POSITION = "saved_position";
 
 	
-	private Strings() {
+	private Constants() {
 		throw new AssertionError();
 	}
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/alex/workspace/AndroidStudioProjects/avgallery/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/home/alex/workspace/AndroidStudioProjects/avgallery/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-57e867b900fd6d10b13c69367bebfbd456044a58.jar" />
+    </item>
+    <item
+        jar="/home/alex/workspace/AndroidStudioProjects/avgallery/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/home/alex/workspace/AndroidStudioProjects/avgallery/app/build/intermediates/pre-dexed/debug/classes-b0a6e18249a3aff2665e75493c14417b4a560706.jar" />
+    </item>
+    <item
+        jar="/home/alex/android-sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/home/alex/workspace/AndroidStudioProjects/avgallery/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-61fd42ddb50be0bcab57a426d64ae49bb0ab839f.jar" />
+    </item>
+    <item
+        jar="/home/alex/workspace/AndroidStudioProjects/avgallery/app/build/intermediates/exploded-aar/com.github.chrisbanes.photoview/library/1.2.3/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="81aa0e8e77d948204aa6754019c6f3c04dd922e3">
+        <dex dex="/home/alex/workspace/AndroidStudioProjects/avgallery/app/build/intermediates/pre-dexed/debug/classes-01ff5b04b1cd0c9afd2adeb9ba09ee456181e564.jar" />
+    </item>
+    <item
+        jar="/home/alex/workspace/AndroidStudioProjects/avgallery/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/home/alex/workspace/AndroidStudioProjects/avgallery/app/build/intermediates/pre-dexed/debug/classes-952b4643cacf89d91e784e72b9d250d275f7c17c.jar" />
+    </item>
+
+</items>

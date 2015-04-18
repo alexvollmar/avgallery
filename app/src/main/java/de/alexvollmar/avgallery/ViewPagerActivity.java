@@ -24,7 +24,7 @@ public class ViewPagerActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_view_pager);
 
-		getActionBar().hide();
+		// getActionBar().hide();
 
 		Bundle bundle = getIntent().getExtras();
 		assert bundle != null;
@@ -135,5 +135,4 @@ public class ViewPagerActivity extends Activity {
 			return null;
 		}
 	}
-
 }
